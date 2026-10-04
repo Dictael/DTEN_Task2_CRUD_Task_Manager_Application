@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Login — TaskFlow</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="auth-page">
+        <main class="auth-card">
+            <a class="logo" href="/">Task<span>Flow</span></a>
+            <h1>Welcome back</h1>
+            <p>Log in to manage your tasks.</p>
+            <form id="loginForm">
+                <label>Email<input id="email" type="email" required autocomplete="email"></label>
+                <label>Password<input id="password" type="password" required autocomplete="current-password"></label>
+                <button class="btn" type="submit">Log In</button>
+                <p id="message" class="message" role="alert"></p>
+            </form>
+            <p>Don't have an account? <a href="/signup.html">Sign up</a></p>
+        </main>
+        <script src="auth.js"></script>
+    </body>
+    </html>

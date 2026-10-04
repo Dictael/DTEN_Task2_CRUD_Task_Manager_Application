@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Dashboard — TaskFlow</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="top">
+            <a class="logo" href="/">Task<span>Flow</span></a>
+            <nav>
+                <span id="welcome">
+
+                </span><button id="logout" class="link-btn">Logout</button>
+            </nav>
+        </header>
+        <main class="dashboard">
+            <div class="dash-head">
+                <div>
+                    <p class="eyebrow">PERSONAL WORKSPACE</p>
+                    <h1>My Tasks</h1>
+                    <p>Stay on top of your work with simple CRUD task management.</p>
+                </div>
+                <button id="newTask" class="btn">+ New Task</button>
+            </div>
+            <section class="toolbar">
+                <input id="search" type="search" placeholder="Search tasks...">
+                <select id="status">
+                    <option value="">All status</option>
+                    <option value="pending">Pending</option>
+                    <option value="in_progress">In progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+                <select id="priority">
+                    <option value="">All priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+            </section>
+            <section id="taskList" class="task-grid" aria-live="polite">
+
+            </section>
+            <p id="message" class="message"></p>
+        </main>
+        <dialog id="taskDialog">
+            <form method="dialog" id="taskForm">
+                <h2 id="dialogTitle">New Task</h2>
+                <input type="hidden" id="taskId">
+                <label>Title<input id="title" required maxlength="150">
+                </label>
+                <label>Description<textarea id="description" rows="4">
+
+                </textarea>
+            </label>
+            <div class="form-row">
+                <label>Status<select id="taskStatus">
+                    <option value="pending">Pending</option>
+                    <option value="in_progress">In progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </label>
+            <label>Priority<select id="taskPriority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+            </select>
+        </label>
+    </div>
+    <label>Due date<input id="dueDate" type="date">
+    </label>
+    <div class="dialog-actions">
+        <button type="button" class="btn ghost" id="cancel">Cancel</button>
+        <button type="submit" class="btn">Save Task</button>
+    </div>
+</form>
+</dialog>
+<script src="app.js">
+
+</script>
+</body>
+</html>
